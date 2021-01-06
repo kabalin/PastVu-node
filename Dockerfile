@@ -6,3 +6,8 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 COPY ./imagick/policy.xml /etc/ImageMagick-6/policy.xml
 WORKDIR /code
+
+COPY pastvu-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["pastvu-entrypoint.sh"]
+
+CMD [ "node" ]
