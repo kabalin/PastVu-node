@@ -1,4 +1,4 @@
-NODE_TAG=15
+NODE_TAG=16.10.0
 build:
 	docker build \
 	-t pastvu/node:$(NODE_TAG) \
@@ -6,6 +6,6 @@ build:
 	--build-arg NODE_TAG=$(NODE_TAG) .
 push:
 	docker push \
-	pastvu/node:$(NODE_TAG) 
+	pastvu/node:$(NODE_TAG)
 	docker push \
 	pastvu/node:latest
